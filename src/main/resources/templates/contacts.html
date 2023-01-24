@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Data</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Phone</th>
+    <th>Email</th>
+  </tr>
+  <tr th:each="contactdata:${contacts}">
+    <td th:text="${contactdata.phone}">Phone</td>
+    <td th:text="${contactdata.email}">Email</td>
+  </tr>
+</table>
+</body>
+</html>
