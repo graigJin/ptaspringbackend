@@ -1,5 +1,9 @@
 package com.pta.ptaspringbackend.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+
 public class Workshop {
 
      private long id;

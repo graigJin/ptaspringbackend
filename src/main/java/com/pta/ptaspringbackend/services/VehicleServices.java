@@ -1,20 +1,19 @@
 package com.pta.ptaspringbackend.services;
 
 import com.pta.ptaspringbackend.data.VehicleRepository;
-import com.pta.ptaspringbackend.models.Person;
-import com.pta.ptaspringbackend.models.Role;
 import com.pta.ptaspringbackend.models.Vehicle;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-public class VehicleService {
+@Service
+public class VehicleServices {
     private final VehicleRepository vehicleRepository;
 
-    public VehicleService(VehicleRepository vehicleRepository) {
+    public VehicleServices(VehicleRepository vehicleRepository) {
         this.vehicleRepository = vehicleRepository;
     }
 
-    public List<Vehicle> getAllPersons(){
+    public List<Vehicle> getAllVehicles(){
         return vehicleRepository.findAll();
     }
 

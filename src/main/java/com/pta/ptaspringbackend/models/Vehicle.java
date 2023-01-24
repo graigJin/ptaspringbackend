@@ -1,25 +1,44 @@
 package com.pta.ptaspringbackend.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="VEHICLE")
 public class Vehicle {
 
+    @Id
+    @Column(name="VEHICLE_ID")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
-    public Person owner;
+
+    @Column(name="PERSON_ID")
+    public String owner;
+
+    @Column(name="MODEL")
     public String model;
+
+    @Column(name="BRAND")
     public String brand;
+
+    @Column(name="LICENCE_NR")
     public String licencePlate;
 
-    public Vehicle (Person owner, String model, String brand, String licencePlate){
+    public Vehicle (String owner, String model, String brand, String licencePlate){
         this.owner = owner;
         this.model = model;
         this.brand = brand;
         this.licencePlate = licencePlate;
     }
 
+    public Vehicle() {
+
+    }
+
     public long getId() {
         return id;
     }
 
-    public Person getOwner(){
+    public String getOwner(){
         return owner;
     }
 
@@ -35,7 +54,7 @@ public class Vehicle {
         return licencePlate;
     }
 
-    public void setOwner(Person owner) {
+    public void setOwner(String owner) {
         this.owner = owner;
     }
 

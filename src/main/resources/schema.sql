@@ -67,6 +67,7 @@ CREATE TABLE VEHICLE(
                          VEHICLE_ID BIGINT PRIMARY KEY,
                          LICENCE_NR VARCHAR(20),
                          MODEL VARCHAR(20),
+                         BRAND VARCHAR(20),
                          PERSON_ID BIGINT,
                          FOREIGN KEY (PERSON_ID) references PERSON(PERSON_ID)
 );
